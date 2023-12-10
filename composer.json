@@ -1,0 +1,18 @@
+{
+    "name": "phespro/react-http-server-extension",
+    "description": "ReactPHP based HTTP-Server implementation",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Phespro\\ReactHttpServerExtension\\": "src/"
+        }
+    },
+    "require": {
+        "php": "^8.2",
+        "ext-pcntl": "*",
+        "react/http": "^1.9",
+        "phespro/phespro": "^1.6",
+        "react/child-process": "^0.6.5"
+    }
+}
