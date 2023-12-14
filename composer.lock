@@ -564,16 +564,16 @@
         },
         {
             "name": "phespro/phespro",
-            "version": "1.6.1",
+            "version": "1.6.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phespro/phespro.git",
-                "reference": "66c0da5c44821e246681095c6320552b9d3422b4"
+                "reference": "05b62452c01cfb6ebc8654e3b3705e7cc587394c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phespro/phespro/zipball/66c0da5c44821e246681095c6320552b9d3422b4",
-                "reference": "66c0da5c44821e246681095c6320552b9d3422b4",
+                "url": "https://api.github.com/repos/phespro/phespro/zipball/05b62452c01cfb6ebc8654e3b3705e7cc587394c",
+                "reference": "05b62452c01cfb6ebc8654e3b3705e7cc587394c",
                 "shasum": ""
             },
             "require": {
@@ -610,9 +610,9 @@
             "description": "An opinionated minimalistic and cache free open source PHP framework.",
             "support": {
                 "issues": "https://github.com/phespro/phespro/issues",
-                "source": "https://github.com/phespro/phespro/tree/1.6.1"
+                "source": "https://github.com/phespro/phespro/tree/1.6.2"
             },
-            "time": "2023-11-05T16:32:35+00:00"
+            "time": "2023-12-10T20:15:46+00:00"
         },
         {
             "name": "psr/container",

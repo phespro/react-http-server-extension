@@ -8,7 +8,7 @@ RUN export DEBIAN_FRONTEND=noninteractive \
     && apt-get update && apt-get -y upgrade \
     && apt-get -y --no-install-recommends install apt-utils unzip git
 
-RUN chmod uga+x /usr/local/bin/install-php-extensions && sync && install-php-extensions xdebug zip pcntl
+RUN chmod uga+x /usr/local/bin/install-php-extensions && sync && install-php-extensions zip pcntl
 
 RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
     && php composer-setup.php \
@@ -17,4 +17,4 @@ RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
 
 EXPOSE 80
 
-CMD ["php", "/code/testapp.php", "react:start-server", "-vv", "--workerAmount=5"]
+CMD ["php", "/code/testapp.php", "react:start-server", "--workerAmount=10"]

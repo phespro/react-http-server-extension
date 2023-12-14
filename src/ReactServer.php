@@ -77,6 +77,22 @@ class ReactServer implements ReactServerInterface
         $child->stderr->on('data', function($chunk) use ($id, $logger) {
             echo($chunk);
         });
+
+        $child->stdout->on('error', fn(\Throwable $err) => $logger->error(
+            "Worker #$id errored",
+            [
+                'message' => $err->getMessage(),
+                'file' => "{$err->getFile()}:{$err->getLine()}",
+            ],
+        ));
+
+        $child->stderr->on('error', fn(\Throwable $err) => $logger->error(
+            "Worker #$id errored",
+            [
+                'message' => $err->getMessage(),
+                'file' => "{$err->getFile()}:{$err->getLine()}",
+            ],
+        ));
     }
 
     protected function listen(LoggerInterface $logger, Config $config)
